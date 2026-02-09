@@ -4,8 +4,8 @@
     <assignments>
         <name>Assign_lead_score</name>
         <label>Assign lead score</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>512</locationX>
+        <locationY>398</locationY>
         <assignmentItems>
             <assignToReference>LeadScore</assignToReference>
             <operator>Assign</operator>
@@ -20,8 +20,8 @@
     <assignments>
         <name>Assign_lead_score_2</name>
         <label>Assign lead score 2</label>
-        <locationX>314</locationX>
-        <locationY>350</locationY>
+        <locationX>780</locationX>
+        <locationY>464</locationY>
         <assignmentItems>
             <assignToReference>LeadScore</assignToReference>
             <operator>Assign</operator>
@@ -36,8 +36,8 @@
     <assignments>
         <name>Assign_lead_score_default</name>
         <label>Assign lead score default</label>
-        <locationX>578</locationX>
-        <locationY>350</locationY>
+        <locationX>1040</locationX>
+        <locationY>398</locationY>
         <assignmentItems>
             <assignToReference>LeadScore</assignToReference>
             <operator>Assign</operator>
@@ -67,8 +67,8 @@
     <decisions>
         <name>Partner_Type_Decision</name>
         <label>Partner Type Decision</label>
-        <locationX>314</locationX>
-        <locationY>242</locationY>
+        <locationX>776</locationX>
+        <locationY>290</locationY>
         <defaultConnector>
             <targetReference>Assign_lead_score_default</targetReference>
         </defaultConnector>
@@ -115,7 +115,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -128,8 +128,8 @@
     <recordCreates>
         <name>Create_New_Partner_Lead</name>
         <label>Create New Partner Lead</label>
-        <locationX>314</locationX>
-        <locationY>542</locationY>
+        <locationX>776</locationX>
+        <locationY>590</locationY>
         <inputAssignments>
             <field>Company</field>
             <value>
@@ -154,8 +154,8 @@
     <screens>
         <name>Basic_Information</name>
         <label>Basic Information</label>
-        <locationX>314</locationX>
-        <locationY>134</locationY>
+        <locationX>776</locationX>
+        <locationY>182</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -190,13 +190,13 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>188</locationX>
-        <locationY>0</locationY>
+        <locationX>650</locationX>
+        <locationY>48</locationY>
         <connector>
             <targetReference>Basic_Information</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <textTemplates>
         <description>Pharos Flow Template for Log After: Create New Partner Lead</description>
         <name>h_2aa654902731023d8f57cdbf0253a9ec_Pharos_Template</name>
