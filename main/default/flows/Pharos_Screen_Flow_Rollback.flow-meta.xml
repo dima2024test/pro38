@@ -342,6 +342,28 @@
         <object>Opportunity</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>Getopp12</name>
+        <label>Getopp12</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>KB</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>LeadSource</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Trade Show</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <queriedFields>Id</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <screens>
         <name>Account_Exists</name>
         <label>Account Exists</label>
@@ -371,7 +393,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Create_Account</targetReference>
+            <targetReference>Getopp12</targetReference>
         </connector>
         <fields>
             <name>Accont_Name</name>
@@ -424,6 +446,68 @@
             <fieldText>Last Name</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>KB</name>
+        <label>KB</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_Account</targetReference>
+        </connector>
+        <fields>
+            <name>DYtestewr</name>
+            <dataTypeMappings>
+                <typeName>T</typeName>
+                <typeValue>Opportunity</typeValue>
+            </dataTypeMappings>
+            <extensionName>flowruntime:kanbanBoard</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>kanbanLabel</name>
+                <value>
+                    <stringValue>Kanban Board</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>kanbanSourceCollection</name>
+                <value>
+                    <elementReference>Getopp12</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cardFieldConfiguration</name>
+                <value>
+                    <stringValue>[{&quot;apiName&quot;:&quot;OwnerId&quot;,&quot;guid&quot;:&quot;field-9982&quot;,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;order&quot;:0,&quot;label&quot;:&quot;Owner ID&quot;}]</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnSourceField</name>
+                <value/>
+            </inputParameters>
+            <inputParameters>
+                <name>headerStyle</name>
+                <value>
+                    <stringValue>Path</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cardHeaderField</name>
+                <value/>
+            </inputParameters>
+            <inputParameters>
+                <name>cardFieldReferences</name>
+                <value/>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
