@@ -118,14 +118,6 @@
         <connector>
             <targetReference>Is_Annual_Revenue_equals_10</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>AnnualRevenue</field>
-            <operator>IsNull</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>Account</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -147,7 +139,7 @@
             <targetReference>Get_Account</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>AnnualR</name>
         <dataType>Number</dataType>

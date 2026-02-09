@@ -13,6 +13,9 @@
                 <stringValue>TEst</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>X2opps</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Test_1</name>
@@ -46,6 +49,12 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>X2opps</name>
+        <label>2opps</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+    </recordCreates>
     <recordLookups>
         <name>Get_Account</name>
         <label>Get Account</label>
@@ -106,5 +115,5 @@
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>InvalidDraft</status>
 </Flow>

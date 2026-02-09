@@ -159,12 +159,6 @@
             <targetReference>Get_Account_with_AR_55</targetReference>
         </connector>
         <inputAssignments>
-            <field>AnnualRevenue</field>
-            <value>
-                <numberValue>55.0</numberValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Name</field>
             <value>
                 <elementReference>Accont_Name</elementReference>
