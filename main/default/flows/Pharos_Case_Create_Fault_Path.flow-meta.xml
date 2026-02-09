@@ -98,7 +98,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <faultConnector>
-            <targetReference>aSSIGN</targetReference>
+            <targetReference>Create_L</targetReference>
         </faultConnector>
         <inputAssignments>
             <field>OwnerId</field>
@@ -116,4 +116,15 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>InvalidDraft</status>
+    <subflows>
+        <name>Create_L</name>
+        <label>Create L</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>aSSIGN</targetReference>
+        </connector>
+        <flowName>Pharos_Create_Lead</flowName>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
 </Flow>
